@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-11-18T10:57:04.210675+00:00",
+  "os": "Linux",
+  "architecture": "x86_64",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "python": "3.13.5",
+  "cmake": "cmake version 3.31.6",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "build_type": "Release",
+  "sizes": "256,4096,65536,1048576",
+  "repeats": 7,
+  "note": "Generic runner CPU; not Huawei Kunpeng or a platform endorsement."
+}

@@ -1,0 +1,17 @@
+name: C++ correctness and benchmark smoke test
+on:
+  push:
+  pull_request:
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build -j 2
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+      - name: Benchmark smoke test
+        run: ./build/softmax_bench --sizes 32,256 --repeats 2 --output /tmp/softmax-smoke.csv
